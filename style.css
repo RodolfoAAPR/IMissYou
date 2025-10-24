@@ -13,6 +13,7 @@ body {
   justify-content: center;
   color: #fff;
   overflow-x: hidden;
+  padding: 20px 0;
 }
 
 .hearts-container {
@@ -30,6 +31,7 @@ body {
   width: 90%;
   z-index: 10;
   position: relative;
+  margin: 20px auto;
 }
 
 /* Carrossel */
@@ -37,7 +39,7 @@ body {
   position: relative;
   width: 100%;
   margin-bottom: 40px;
-  max-height: 600px;
+  max-height: 500px;
   overflow: hidden;
 }
 
@@ -235,6 +237,19 @@ body {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .carousel {
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+  }
+
   .countdown-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -256,6 +271,15 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+  .carousel {
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
+  }
+
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr);
   }
