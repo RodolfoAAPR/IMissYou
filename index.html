@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="player-container" style="position:relative;">
-  <audio autoplay>
+  <audio autoplay muted loop id="bgAudio">
   <source src="images/seu-astral.mp4" type="audio/mp4">
   </audio>
     <div class="hearts-container"></div>
@@ -98,6 +98,13 @@
     </div>
 
     <script>
+
+        const audio = document.getElementById('bgAudio');
+        document.body.addEventListener('click', () => {
+        audio.muted = false;
+        audio.play();
+        }, { once: true });
+        
         let currentSlide = 0;
         const totalSlides = document.querySelectorAll('.carousel-item').length;
         document.getElementById('totalSlides').textContent = totalSlides;
